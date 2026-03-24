@@ -1,0 +1,7 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cp bootcamp/week1/notes.txt bootcamp/week1/scripts/notes.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat bootcamp/week1/scripts/notes.txt 
+day 1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % mv bootcamp/week1/scripts/notes.txt bootcamp/week1/scripts/day1_backup.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat bootcamp/week1/scripts/day1_backup.txt
+day 1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

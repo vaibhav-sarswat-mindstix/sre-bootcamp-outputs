@@ -1,0 +1,6 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % rm bootcamp/week1/notes.txt 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls bootcamp/week1 
+scripts
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls bootcamp/week1/scripts 
+day1_backup.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

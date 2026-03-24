@@ -1,0 +1,39 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % mkdir -p bootcamp/week1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % mkdir -p bootcamp/week1/scripts
+mindstix-dev@Mindstixs-MacBook-Pro ~ % touch bootcamp/README.md
+mindstix-dev@Mindstixs-MacBook-Pro ~ % touch bootcamp/week1/notes.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % echo "day 1" > notes.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Movies			bootcamp
+Documents		Music			notes.txt
+Downloads		Pictures		sre-bootcamp-outputs
+Library			Public			test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -l
+total 8
+drwx------+  3 mindstix-dev  staff    96 Mar 24 12:22 Desktop
+drwx------+  3 mindstix-dev  staff    96 Mar 24 12:22 Documents
+drwx------+  5 mindstix-dev  staff   160 Mar 24 14:44 Downloads
+drwx------@ 78 mindstix-dev  staff  2496 Mar 24 15:32 Library
+drwx------   3 mindstix-dev  staff    96 Mar 24 12:22 Movies
+drwx------+  4 mindstix-dev  staff   128 Mar 24 14:17 Music
+drwx------+  3 mindstix-dev  staff    96 Mar 24 12:22 Pictures
+drwxr-xr-x+  4 mindstix-dev  staff   128 Mar 24 12:22 Public
+drwxr-xr-x   4 mindstix-dev  staff   128 Mar 24 17:37 bootcamp
+-rw-r--r--   1 mindstix-dev  staff     6 Mar 24 17:46 notes.txt
+drwxr-xr-x   4 mindstix-dev  staff   128 Mar 24 17:20 sre-bootcamp-outputs
+drwxr-xr-x   3 mindstix-dev  staff    96 Mar 24 15:27 test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % rm -rf notes.txt  
+mindstix-dev@Mindstixs-MacBook-Pro ~ % echo "day 1" > bootcamp/week1/notes.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % echo "Vaibhav Sarswat 24/03/2026" >> bootcamp/README.md
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls bootcamp 
+README.md	week1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls bootcamp -la
+ls: -la: No such file or directory
+bootcamp:
+README.md	week1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat bootcamp/README.md 
+Vaibhav Sarswat 24/03/2026
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat bootcamp/week1/notes.txt 
+day 1
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

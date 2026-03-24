@@ -1,0 +1,1 @@
+rm bootcamp/week1/notes.txt

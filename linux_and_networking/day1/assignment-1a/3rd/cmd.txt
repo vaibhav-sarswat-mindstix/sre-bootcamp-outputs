@@ -1,0 +1,6 @@
+mkdir -p bootcamp/week1
+mkdir -p bootcamp/week1/scripts
+touch bootcamp/README.md
+touch bootcamp/week1/notes.txt
+echo "day 1" > bootcamp/week1/notes.txt
+echo "Vaibhav Sarswat 24/03/2026" >> bootcamp/README.md

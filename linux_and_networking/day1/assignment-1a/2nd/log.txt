@@ -1,0 +1,14 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % find /var/log -name "*.log" 
+/var/log/fsck_apfs_error.log
+/var/log/wifi-03-24-2026__08:42:07.839.log
+/var/log/displaypolicy/displaypolicyd.0:2:0.log
+/var/log/displaypolicy/displaypolicyd.log
+/var/log/fsck_hfs.log
+/var/log/displaypolicyd.stdout.log
+/var/log/com.apple.xpc.launchd/launchd.log
+/var/log/shutdown_monitor.log
+/var/log/system.log
+/var/log/wifi.log
+/var/log/install.log
+/var/log/fsck_apfs.log
+mindstix-dev@Mindstixs-MacBook-Pro ~ %                               

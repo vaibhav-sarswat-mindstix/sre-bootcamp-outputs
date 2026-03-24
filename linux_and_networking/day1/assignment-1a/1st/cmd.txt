@@ -1,0 +1,1 @@
+ls -Sh | head -n 5 > /Users/mindstix-dev/sre-bootcamp-outputs/linux_and_networking/day1/assignment-1a/1-output.txt

@@ -1,0 +1,15 @@
+mindstix-dev@Mindstixs-MacBook-Pro /var % ls -Sh | head -n 5
+db
+log
+run
+audit
+at
+mindstix-dev@Mindstixs-MacBook-Pro /var % ls -Sh | head -n 5 > /Users/mindstix-dev/sre-bootcamp-outputs/linux_and_networking/day1/assignment-1a/1-output.txt
+mindstix-dev@Mindstixs-MacBook-Pro /var % cat /Users/mindstix-dev/sre-bootcamp-outputs/linux_and_networking/day1/assignment-1a/1-output.txt
+
+db
+log
+run
+audit
+at
+mindstix-dev@Mindstixs-MacBook-Pro /var % 
