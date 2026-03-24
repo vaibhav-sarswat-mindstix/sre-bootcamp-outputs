@@ -1,0 +1,4 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % find ~/bootcamp -type f
+/Users/mindstix-dev/bootcamp/week1/scripts/day1_backup.txt
+/Users/mindstix-dev/bootcamp/README.md
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
