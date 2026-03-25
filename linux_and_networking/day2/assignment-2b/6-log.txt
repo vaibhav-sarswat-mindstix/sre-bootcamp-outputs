@@ -1,0 +1,21 @@
+mindstix-dev@Mindstixs-MacBook-Pro / % ps aux | grep logger
+mindstix-dev     53113   0.0  0.0 34122868    908   ??  S     5:44PM   0:00.53 sh ./logger.sh
+root               312   0.0  0.0 33690116   1388   ??  S    Tue12PM   0:00.43 /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+mindstix-dev     54290   0.0  0.0 34111992    244 s001  R+    5:57PM   0:00.00 grep logger
+mindstix-dev@Mindstixs-MacBook-Pro / % kill -9 53113
+mindstix-dev@Mindstixs-MacBook-Pro / % 
+
+mindstix-dev@Mindstixs-MacBook-Pro assignment-2b % tail -f -n 10 output.log
+Wed Mar 25 17:57:13 IST 2026
+Wed Mar 25 17:57:15 IST 2026
+Wed Mar 25 17:57:17 IST 2026
+Wed Mar 25 17:57:19 IST 2026
+Wed Mar 25 17:57:21 IST 2026
+Wed Mar 25 17:57:23 IST 2026
+Wed Mar 25 17:57:25 IST 2026
+Wed Mar 25 17:57:27 IST 2026
+Wed Mar 25 17:57:29 IST 2026
+Wed Mar 25 17:57:31 IST 2026
+
+
+##### NOT GROWING #####

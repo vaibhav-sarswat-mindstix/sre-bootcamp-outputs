@@ -1,0 +1,18 @@
+Last login: Wed Mar 25 17:50:56 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % du -sh home 
+du: home: No such file or directory
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Downloads		Movies			Pictures		bootcamp		secrets.txt		sre-bootcamp-outputs
+Documents		Library			Music			Public			hello.sh		shared			test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cd ..
+mindstix-dev@Mindstixs-MacBook-Pro /Users % ls
+Shared		mindstix	mindstix-dev	vaibhavsarswat
+mindstix-dev@Mindstixs-MacBook-Pro /Users % cd ..
+mindstix-dev@Mindstixs-MacBook-Pro / % ls
+Applications	System		Volumes		cores		etc		opt		sbin		usr
+Library		Users		bin		dev		home		private		tmp		var
+mindstix-dev@Mindstixs-MacBook-Pro / % du -sh home      
+  0B	home
+mindstix-dev@Mindstixs-MacBook-Pro / % 
+
+

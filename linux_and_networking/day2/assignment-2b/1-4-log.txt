@@ -1,0 +1,27 @@
+Last login: Wed Mar 25 17:42:03 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Downloads		Movies			Pictures		bootcamp		secrets.txt		sre-bootcamp-outputs
+Documents		Library			Music			Public			hello.sh		shared			test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cd sre-bootcamp-outputs/linux_and_networking/day2/assignment-2b
+mindstix-dev@Mindstixs-MacBook-Pro assignment-2b % ls
+1st-log.txt	logger.sh
+mindstix-dev@Mindstixs-MacBook-Pro assignment-2b % chmod +x logger.sh 
+mindstix-dev@Mindstixs-MacBook-Pro assignment-2b % nohup ./logger.sh
+appending output to nohup.out
+
+'''[[[[2nd terminal this terminal not stopped yet]]]]'''
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | grep logger
+root               312   0.0  0.0 33690116   1380   ??  S    Tue12PM   0:00.43 /usr/sbin/systemstats --logger-helper /private/var/db/systemstats
+mindstix-dev     53359   0.0  0.0 33587588    156 s001  R+    5:47PM   0:00.00 grep logger
+mindstix-dev     53113   0.0  0.0 34122868   1040 s000  S+    5:44PM   0:00.16 sh ./logger.sh
+
+
+'''' [[[Let's do one this stop the terminal and check whether it still exsists]]]
+
+Last login: Wed Mar 25 17:47:17 on ttys001
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | grep 53113
+mindstix-dev     53113   0.0  0.0 34122868   1040   ??  S     5:44PM   0:00.30 sh ./logger.sh
+mindstix-dev     53734   0.0  0.0 34138724    668 s000  S+    5:51PM   0:00.00 grep 53113
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+
