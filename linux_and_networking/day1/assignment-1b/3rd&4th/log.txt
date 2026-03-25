@@ -1,0 +1,22 @@
+Last login: Tue Mar 24 17:13:05 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % vi hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ./hello.sh
+zsh: permission denied: ./hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % chmod +x hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ./hello.sh 
+Hello from DevOps Bootcamp
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep hello.sh 
+-rwxr-xr-x   1 mindstix-dev  staff     35 Mar 25 12:53 hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % umask 200 hello.sh
+umask: too many arguments
+mindstix-dev@Mindstixs-MacBook-Pro ~ % chmod 300 hello.sh 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep hello.sh
+--wx------   1 mindstix-dev  staff     35 Mar 25 12:53 hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat hello.sh 
+cat: hello.sh: Permission denied
+mindstix-dev@Mindstixs-MacBook-Pro ~ % chmod 700 hello.sh 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cat hello.sh      
+echo "Hello from DevOps Bootcamp"
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+

@@ -1,0 +1,63 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % vi secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Downloads		Movies			Pictures		bootcamp		sre-bootcamp-outputs
+Documents		Library			Music			Public			secrets.txt		test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls secrets.txt -la
+ls: -la: No such file or directory
+secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls secrets.txt -l 
+ls: -l: No such file or directory
+secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls secrets.txt   
+secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls secrets.txt -la
+ls: -la: No such file or directory
+secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep secrets.txt 
+-rw-r--r--   1 mindstix-dev  staff     44 Mar 25 12:39 secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % chmod 600 secrets.txt    
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep secrets.txt
+-rw-------   1 mindstix-dev  staff     44 Mar 25 12:39 secrets.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

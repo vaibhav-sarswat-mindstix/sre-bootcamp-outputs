@@ -1,0 +1,3 @@
+vi secrets.txt
+ls -la | grep secrets.txt
+chmod 600 secrets.txt

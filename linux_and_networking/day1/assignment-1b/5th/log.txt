@@ -1,0 +1,17 @@
+mindstix-dev@Mindstixs-MacBook-Pro ~ % mkdir -p shared 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Music			secrets.txt
+Documents		Pictures		shared
+Downloads		Public			sre-bootcamp-outputs
+Library			bootcamp		test
+Movies			hello.sh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | shared
+zsh: command not found: shared
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep shared
+drwxr-xr-x   2 mindstix-dev  staff     64 Mar 25 13:18 shared
+mindstix-dev@Mindstixs-MacBook-Pro ~ % chmod 755 shared
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls -la | grep shared
+drwxr-xr-x   2 mindstix-dev  staff     64 Mar 25 13:18 shared
+mindstix-dev@Mindstixs-MacBook-Pro ~ %    
+
+
