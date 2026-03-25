@@ -1,0 +1,9 @@
+Last login: Wed Mar 25 14:34:56 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % sleep 999 &   
+[1] 51401
+mindstix-dev@Mindstixs-MacBook-Pro ~ % sleep 888 &
+[2] 51403
+mindstix-dev@Mindstixs-MacBook-Pro ~ % kill -15 51401 51403
+[2]  + terminated  sleep 888                                                    
+[1]  + terminated  sleep 999
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

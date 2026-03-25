@@ -1,0 +1,16 @@
+Last login: Wed Mar 25 14:23:54 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % sleep 300 &
+[1] 51235
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps -ef | grep -i 51235
+  503 51235 51228   0  2:25PM ttys000    0:00.00 sleep 300
+  503 51238 51228   0  2:26PM ttys000    0:00.00 grep -i 51235
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | 51228
+zsh: command not found: 51228
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | grep 51228
+mindstix-dev     51242   0.0  0.0 34121316    548 s000  R+    2:26PM   0:00.00 grep 51228
+mindstix-dev     51228   0.0  0.0 34150336   1916 s000  S     2:25PM   0:00.03 -zsh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % kill 51235
+[1]  + terminated  sleep 300                                                                                                                                                                                
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | grep 51235
+mindstix-dev     51261   0.0  0.0 34121316    588 s000  R+    2:28PM   0:00.00 grep 51235
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 

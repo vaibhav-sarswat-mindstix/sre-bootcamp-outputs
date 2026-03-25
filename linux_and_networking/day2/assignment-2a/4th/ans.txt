@@ -1,0 +1,16 @@
+Q1) Which process is using the most CPU right now?
+answer to 1st q --> 
+  PID --> 0 command --> kernal_task
+
+Q2) What does the load average line at the top mean? (Look it up.)
+answer to 2nd q-->
+   Listed load aveerage is 1.49, 1.79, 1.93 denoting healthy 
+   but it is variable 
+   actually load average is the count of proccess working at cpu generally known as queue pressure 
+   1st num --> last 1 min
+   2nd num --> last 5 min 
+   3rd num --> last 15 min 
+
+Q3) 
+answer to 3rd q --> 
+    sort by memory 

@@ -1,0 +1,13 @@
+Last login: Wed Mar 25 13:28:38 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls
+Desktop			Downloads		Movies			Pictures		bootcamp		secrets.txt		sre-bootcamp-outputs
+Documents		Library			Music			Public			hello.sh		shared			test
+mindstix-dev@Mindstixs-MacBook-Pro ~ % echo $$
+51171
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | echo $$
+51171
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ps aux | grep -i 51171
+mindstix-dev     51185   0.0  0.0 33591680     88 s000  R+    2:24PM   0:00.00 grep -i 51171
+mindstix-dev     51171   0.0  0.0 34150336   1896 s000  S     2:23PM   0:00.03 -zsh
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+
