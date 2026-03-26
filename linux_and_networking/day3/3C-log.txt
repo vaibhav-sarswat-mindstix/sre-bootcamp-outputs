@@ -1,0 +1,35 @@
+mindstix-dev@Mindstixs-MacBook-Pro day3 % sed 's/ERROR/[CRITICAL]/g' sample.log
+2024-01-10 10:01:23 INFO  Server started on port 8080
+2024-01-10 10:01:45 DEBUG Health check passed
+2024-01-10 10:02:10 [CRITICAL] Database connection failed: timeout
+2024-01-10 10:02:15 INFO  Retrying connection...
+2024-01-10 10:02:20 [CRITICAL] Database connection failed: refused
+2024-01-10 10:02:25 WARN  Max retries reached
+2024-01-10 10:03:00 INFO  Failover to secondary DB
+2024-01-10 10:03:05 DEBUG Query executed in 23ms
+2024-01-10 10:05:00 [CRITICAL] Disk usage at 94%%                                                                   
+mindstix-dev@Mindstixs-MacBook-Pro day3 % sed 's/ERROR/[CRITICAL]/g' sample.log > sample_sed.log
+mindstix-dev@Mindstixs-MacBook-Pro day3 % sed '/DEBUG/d' sample.log 
+2024-01-10 10:01:23 INFO  Server started on port 8080
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:15 INFO  Retrying connection...
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+2024-01-10 10:02:25 WARN  Max retries reached
+2024-01-10 10:03:00 INFO  Failover to secondary DB
+2024-01-10 10:05:00 ERROR Disk usage at 94%%                                                                        
+mindstix-dev@Mindstixs-MacBook-Pro day3 % sed -n '3,7p' sample.log
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:15 INFO  Retrying connection...
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+2024-01-10 10:02:25 WARN  Max retries reached
+2024-01-10 10:03:00 INFO  Failover to secondary DB
+mindstix-dev@Mindstixs-MacBook-Pro day3 % sed 's/2024-01-10/REDACTED/g' sample.log 
+REDACTED 10:01:23 INFO  Server started on port 8080
+REDACTED 10:01:45 DEBUG Health check passed
+REDACTED 10:02:10 ERROR Database connection failed: timeout
+REDACTED 10:02:15 INFO  Retrying connection...
+REDACTED 10:02:20 ERROR Database connection failed: refused
+REDACTED 10:02:25 WARN  Max retries reached
+REDACTED 10:03:00 INFO  Failover to secondary DB
+REDACTED 10:03:05 DEBUG Query executed in 23ms
+REDACTED 10:05:00 ERROR Disk usage at 94%%                                                                          

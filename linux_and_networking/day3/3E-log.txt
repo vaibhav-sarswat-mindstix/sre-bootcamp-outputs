@@ -1,0 +1,143 @@
+a)---------->
+
+mindstix-dev@Mindstixs-MacBook-Pro day3 % vi ~/.zshrc 
+mindstix-dev@Mindstixs-MacBook-Pro day3 % source ~/.zshrc 
+mindstix-dev@Mindstixs-MacBook-Pro day3 % ll
+total 56
+-rw-r--r--@ 1 mindstix-dev  staff   462B Mar 26 11:26 sample.log
+-rw-r--r--@ 1 mindstix-dev  staff   1.6K Mar 26 11:29 3A-log.txt
+-rw-r--r--@ 1 mindstix-dev  staff   1.2K Mar 26 15:30 3B-log.txt
+-rw-r--r--@ 1 mindstix-dev  staff   477B Mar 26 16:06 sample_sed.log
+-rw-r--r--@ 1 mindstix-dev  staff   2.1K Mar 26 16:11 3C-log.txt
+-rw-r--r--@ 1 mindstix-dev  staff   775B Mar 26 17:17 3D-log.txt
+-rw-r--r--@ 1 mindstix-dev  staff   1.1K Mar 26 17:19 ques.txt
+-rw-r--r--@ 1 mindstix-dev  staff     0B Mar 26 17:46 3E-log.txt
+mindstix-dev@Mindstixs-MacBook-Pro day3 % 
+
+Last login: Thu Mar 26 17:47:04 on ttys000
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ll
+total 24
+drwxr-xr-x+  4 mindstix-dev  staff   128B Mar 24 12:22 Public
+drwx------   3 mindstix-dev  staff    96B Mar 24 12:22 Movies
+drwx------+  3 mindstix-dev  staff    96B Mar 24 12:22 Documents
+drwx------+  4 mindstix-dev  staff   128B Mar 24 14:17 Music
+drwxr-xr-x   3 mindstix-dev  staff    96B Mar 24 15:27 test
+drwxr-xr-x   4 mindstix-dev  staff   128B Mar 24 17:37 bootcamp
+drwx------+  4 mindstix-dev  staff   128B Mar 25 10:04 Pictures
+drwx------@ 81 mindstix-dev  staff   2.5K Mar 25 12:39 Library
+-rw-------   1 mindstix-dev  staff    44B Mar 25 12:39 secrets.txt
+-rwx------   1 mindstix-dev  staff    35B Mar 25 12:53 hello.sh
+drwxr-xr-x   2 mindstix-dev  staff    64B Mar 25 13:18 shared
+drwxr-xr-x   4 mindstix-dev  staff   128B Mar 25 15:58 sre-bootcamp-outputs
+drwx------+  5 mindstix-dev  staff   160B Mar 25 17:52 Desktop
+drwx------+  7 mindstix-dev  staff   224B Mar 25 22:24 Downloads
+-rw-r--r--   1 mindstix-dev  staff   311B Mar 26 10:45 new_file.txt
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+
+
+b) --------------->
+
+export PATH="$PATH:$HOME/bootcamp/scripts" ##in VIM
+mindstix-dev@Mindstixs-MacBook-Pro scripts % vi ~/.zshrc 
+mindstix-dev@Mindstixs-MacBook-Pro scripts % source ~/.zshrc
+mindstix-dev@Mindstixs-MacBook-Pro scripts % hello
+Working...
+mindstix-dev@Mindstixs-MacBook-Pro scripts % ls      
+hello
+mindstix-dev@Mindstixs-MacBook-Pro scripts % cd ~
+mindstix-dev@Mindstixs-MacBook-Pro ~ % hello
+Working...
+mindstix-dev@Mindstixs-MacBook-Pro ~ % 
+
+c) ---------------->
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % export BOOTCAMP_ENV=dev >> ~/.zshrc 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % source ~/.zshrc 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % env
+MallocNanoZone=0
+USER=mindstix-dev
+COMMAND_MODE=unix2003
+__CFBundleIdentifier=com.microsoft.VSCode
+PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:~/bootcamp/scripts:/Users/mindstix-dev/bootcamp/scripts:/Users/mindstix-dev/bootcamp/scripts
+LOGNAME=mindstix-dev
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.bBlGjOvCGO/Listeners
+HOME=/Users/mindstix-dev
+SHELL=/bin/zsh
+TMPDIR=/var/folders/16/9gs_8bw11qb9dnc12plkj3hr0000gq/T/
+__CF_USER_TEXT_ENCODING=0x1F7:0:2
+XPC_SERVICE_NAME=0
+XPC_FLAGS=0x0
+PWD=/Users/mindstix-dev
+LC_CTYPE=UTF-8
+TERM=xterm-256color
+TERM_SESSION_ID=0AC641C1-8D6D-48C0-8509-3F0487610B7B
+TERM_PROGRAM_VERSION=1.112.0
+SHLVL=3
+TERM_PROGRAM=vscode
+LANG=en_US.UTF-8
+COLORTERM=truecolor
+GIT_ASKPASS=/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
+VSCODE_GIT_ASKPASS_NODE=/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN=/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
+VSCODE_GIT_IPC_HANDLE=/var/folders/16/9gs_8bw11qb9dnc12plkj3hr0000gq/T/vscode-git-cfac0da929.sock
+VSCODE_INJECTION=1
+ZDOTDIR=/Users/mindstix-dev
+USER_ZDOTDIR=/Users/mindstix-dev
+OLDPWD=/Users/mindstix-dev/bootcamp/scripts
+VSCODE_PROFILE_INITIALIZED=1
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+BOOTCAMP_ENV=dev
+_=/usr/bin/env
+mindstix-dev@Mindstixs-MacBook-Pro ~ % echo $BOOTCAMP_ENV                 
+dev
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cd ..
+mindstix-dev@Mindstixs-MacBook-Pro /Users % ls  
+Shared          mindstix        mindstix-dev    vaibhavsarswat
+mindstix-dev@Mindstixs-MacBook-Pro /Users % cd mindstix-dev 
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cd bootcamp/scripts 
+mindstix-dev@Mindstixs-MacBook-Pro scripts % vi check.sh 
+mindstix-dev@Mindstixs-MacBook-Pro scripts % chmod +x check.sh 
+mindstix-dev@Mindstixs-MacBook-Pro scripts % check.sh 
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+SHELL=/bin/zsh
+TMPDIR=/var/folders/16/9gs_8bw11qb9dnc12plkj3hr0000gq/T/
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+TERM_PROGRAM_VERSION=1.112.0
+BOOTCAMP_ENV=dev
+ZDOTDIR=/Users/mindstix-dev
+MallocNanoZone=0
+TERM_SESSION_ID=0AC641C1-8D6D-48C0-8509-3F0487610B7B
+USER=mindstix-dev
+COMMAND_MODE=unix2003
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.bBlGjOvCGO/Listeners
+VSCODE_PROFILE_INITIALIZED=1
+__CF_USER_TEXT_ENCODING=0x1F7:0:2
+PATH=/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:~/bootcamp/scripts:/Users/mindstix-dev/bootcamp/scripts:/Users/mindstix-dev/bootcamp/scripts
+_=/usr/bin/env
+USER_ZDOTDIR=/Users/mindstix-dev
+__CFBundleIdentifier=com.microsoft.VSCode
+PWD=/Users/mindstix-dev/bootcamp/scripts
+LANG=en_US.UTF-8
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+XPC_FLAGS=0x0
+XPC_SERVICE_NAME=0
+VSCODE_INJECTION=1
+SHLVL=4
+HOME=/Users/mindstix-dev
+VSCODE_GIT_ASKPASS_MAIN=/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
+LOGNAME=mindstix-dev
+VSCODE_GIT_IPC_HANDLE=/var/folders/16/9gs_8bw11qb9dnc12plkj3hr0000gq/T/vscode-git-cfac0da929.sock
+LC_CTYPE=UTF-8
+VSCODE_GIT_ASKPASS_NODE=/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Plugin).app/Contents/MacOS/Code Helper (Plugin)
+GIT_ASKPASS=/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
+COLORTERM=truecolor
+dev
+mindstix-dev@Mindstixs-MacBook-Pro scripts % ls
+check.sh        hello
+mindstix-dev@Mindstixs-MacBook-Pro scripts %
+
+d) -------------> 
+zshrc --> zshrc used every time
+zprofile --> only at the login time

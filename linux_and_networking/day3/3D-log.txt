@@ -1,0 +1,24 @@
+mindstix-dev@Mindstixs-MacBook-Pro day3 % cat sample.log | awk '{print $3}'| sort| uniq
+DEBUG
+ERROR
+INFO
+WARN
+mindstix-dev@Mindstixs-MacBook-Pro day3 % cat sample.log | grep -i ERROR| sort -k2,2 -rn | sed -n '1p'
+2024-01-10 10:05:00 ERROR Disk usage at 94%
+mindstix-dev@Mindstixs-MacBook-Pro day3 % cat sample.log | awk '{print substr($2, 1, 5)}' | sort | uniq -c| sort -rn
+
+   4 10:02
+   2 10:03
+   2 10:01
+   1 10:05
+
+mindstix-dev@Mindstixs-MacBook-Pro day3 % cat sample.log|awk '{for (i = 4;i<=NF;i++) printf "%s ", $i; print ""}'|sort
+Database connection failed: refused 
+Database connection failed: timeout 
+Disk usage at 94% 
+Failover to secondary DB 
+Health check passed 
+Max retries reached 
+Query executed in 23ms 
+Retrying connection... 
+Server started on port 8080

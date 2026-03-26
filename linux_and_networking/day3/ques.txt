@@ -1,0 +1,29 @@
+3A
+=========
+Show only ERROR lines.
+Count how many ERROR lines there are.
+Show all lines that are NOT DEBUG.
+Find all lines mentioning "connection" — case insensitive.
+Show ERROR lines with their line numbers.
+
+3B
+=========
+Print only the timestamps and log levels for every line.
+Print the full message only for ERROR lines.
+Count how many times each log level appears. (Hint — look up awk associative arrays.)
+Print the last column of every line.
+
+3C
+=========
+Replace all occurrences of ERROR with [CRITICAL] in sample.log and print the result (don't modify the file).
+Now do the same but store it in the new file (sample_sed.log)
+Delete all DEBUG lines from the output.
+Print only lines 3–7.
+Replace the date 2024-01-10 with REDACTED throughout the file
+
+3D 
+=========
+1. Print all unique log levels that appear in the file.
+2. Find the most recent ERROR message (by timestamp).
+3. Count how many log entries exist per minute (hint: column 2 gives you the time — use the first 5 chars).
+4. Extract all error messages (the text after the log level) and sort them alphabetically.

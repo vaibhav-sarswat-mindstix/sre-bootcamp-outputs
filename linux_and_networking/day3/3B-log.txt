@@ -1,0 +1,36 @@
+mindstix-dev@Mindstixs-MacBook-Pro day3 % awk 'BEGIN {print "Timestamps LogLevel"; print "-------------- -----------
+-"} {print $2 $3}' sample.log 
+Timestamps LogLevel
+-------------- ------------
+10:01:23INFO
+10:01:45DEBUG
+10:02:10ERROR
+10:02:15INFO
+10:02:20ERROR
+10:02:25WARN
+10:03:00INFO
+10:03:05DEBUG
+10:05:00ERROR
+mindstix-dev@Mindstixs-MacBook-Pro day3 % awk '/ERROR/ {print $0}' sample.log
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+2024-01-10 10:05:00 ERROR Disk usage at 94%
+mindstix-dev@Mindstixs-MacBook-Pro day3 % awk 'BEGIN{print"LogLevel Count";print "---------- ---------"}{count[$3]++} END{for (i in count) print i, count[i]}' sample.log 
+LogLevel Count
+---------- ---------
+INFO 3
+WARN 1
+DEBUG 2
+ERROR 3
+
+mindstix-dev@Mindstixs-MacBook-Pro day3 % awk '{for (i =4;i<=NF;i++)printf "%s ",$i; print ""}' sample.log
+Server started on port 8080 
+Health check passed 
+Database connection failed: timeout 
+Retrying connection... 
+Database connection failed: refused 
+Max retries reached 
+Failover to secondary DB 
+Query executed in 23ms 
+Disk usage at 94% 
+mindstix-dev@Mindstixs-MacBook-Pro day3 % 

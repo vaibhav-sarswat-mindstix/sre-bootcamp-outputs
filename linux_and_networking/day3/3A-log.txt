@@ -1,0 +1,30 @@
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % ls
+linux_and_networking
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % cd day3
+cd: no such file or directory: day3
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % ls
+linux_and_networking
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % cd linux_and_networking/day3
+mindstix-dev@Mindstixs-MacBook-Pro day3 % grep "ERROR" sample.log 
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+2024-01-10 10:05:00 ERROR Disk usage at 94%
+mindstix-dev@Mindstixs-MacBook-Pro day3 % grep -c "ERROR" sample.log
+3
+mindstix-dev@Mindstixs-MacBook-Pro day3 % grep -v "DEBUG" sample.log
+2024-01-10 10:01:23 INFO  Server started on port 8080
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:15 INFO  Retrying connection...
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+2024-01-10 10:02:25 WARN  Max retries reached
+2024-01-10 10:03:00 INFO  Failover to secondary DB
+2024-01-10 10:05:00 ERROR Disk usage at 94%
+mindstix-dev@Mindstixs-MacBook-Pro day3 % grep -i "connection" sample.log
+2024-01-10 10:02:10 ERROR Database connection failed: timeout
+2024-01-10 10:02:15 INFO  Retrying connection...
+2024-01-10 10:02:20 ERROR Database connection failed: refused
+mindstix-dev@Mindstixs-MacBook-Pro day3 % grep -n "ERROR" sample.log
+3:2024-01-10 10:02:10 ERROR Database connection failed: timeout
+5:2024-01-10 10:02:20 ERROR Database connection failed: refused
+9:2024-01-10 10:05:00 ERROR Disk usage at 94%
+mindstix-dev@Mindstixs-MacBook-Pro day3 % 
