@@ -1,0 +1,213 @@
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % ping mindstix.com
+PING mindstix.com (199.36.158.100): 56 data bytes
+64 bytes from 199.36.158.100: icmp_seq=0 ttl=59 time=10.704 ms
+64 bytes from 199.36.158.100: icmp_seq=1 ttl=59 time=10.207 ms
+64 bytes from 199.36.158.100: icmp_seq=2 ttl=57 time=27.292 ms
+64 bytes from 199.36.158.100: icmp_seq=3 ttl=59 time=10.696 ms
+64 bytes from 199.36.158.100: icmp_seq=4 ttl=59 time=11.049 ms
+64 bytes from 199.36.158.100: icmp_seq=5 ttl=59 time=10.569 ms
+64 bytes from 199.36.158.100: icmp_seq=6 ttl=59 time=10.428 ms
+64 bytes from 199.36.158.100: icmp_seq=7 ttl=57 time=27.783 ms
+64 bytes from 199.36.158.100: icmp_seq=8 ttl=59 time=11.995 ms
+^C
+--- mindstix.com ping statistics ---
+9 packets transmitted, 9 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 10.207/14.525/27.783/6.973 ms
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % 
+
+(Answer to Q1) --> 
+64, 14.525ms
+
+
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % traceroute mindstix.com
+traceroute to mindstix.com (199.36.158.100), 64 hops max, 52 byte packets
+ 1  * * *
+ 2  192.168.0.1 (192.168.0.1)  4.492 ms  13.210 ms  8.648 ms
+ 3  telemedia-ap-dynamic-255.255.170.122.airtelbroadband.in (122.170.255.255)  15.328 ms  5.303 ms  8.528 ms
+ 4  61.246.203.113 (61.246.203.113)  12.751 ms  13.353 ms  37.569 ms
+ 5  116.119.106.204 (116.119.106.204)  48.083 ms  11.408 ms
+    116.119.73.209 (116.119.73.209)  32.108 ms
+ 6  * * 14.141.123.226.static-chennai.vsnl.net.in (14.141.123.226)  32.921 ms
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+31  * * *
+32  * * *
+33  * * *
+34  * * *
+35  * * *
+36  * * *
+37  * * *
+38  * * *
+39  * * *
+40  * * *
+41  * * *
+42  * * *
+43  * * *
+44  * * *
+45  * * *
+46  * * *
+47  * * *
+48  * * *
+49  * * *
+50  * * *
+51  * * *
+52  * * *
+53  * * *
+54  * * *
+55  * * *
+56  * * *
+57  * * *
+58  * * *
+59  * * *
+60  * * *
+61  * * *
+62  * * *
+63  * * *
+64  * * *
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % 
+
+Answer to (Q2) --> 
+The traceroute follows from wifi -> isp -> regional --> (not shown but at google edge) -> blocked icmp 
+
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % nslookup google.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.174.78
+
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % nslookup google.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.174.78
+
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % nslookup google.com
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.251.220.46
+
+Answer to (Q3) --> 
+What actually it's happening here is one system behaving like a 1000s of lb.
+
+
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % curl -v https://httpbin.org/get
+* Host httpbin.org:443 was resolved.
+* IPv6: (none)
+* IPv4: 54.172.102.128, 34.234.203.36, 32.194.43.65, 44.221.213.41, 52.71.170.232, 54.146.128.0
+*   Trying 54.172.102.128:443...
+* Connected to httpbin.org (54.172.102.128) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=httpbin.org
+*  start date: Jul 20 00:00:00 2025 GMT
+*  expire date: Aug 17 23:59:59 2026 GMT
+*  subjectAltName: host "httpbin.org" matched cert's "httpbin.org"
+*  issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M03
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://httpbin.org/get
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: httpbin.org]
+* [HTTP/2] [1] [:path: /get]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET /get HTTP/2
+> Host: httpbin.org
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< date: Fri, 27 Mar 2026 10:16:29 GMT
+< content-type: application/json
+< content-length: 255
+< server: gunicorn/19.9.0
+< access-control-allow-origin: *
+< access-control-allow-credentials: true
+< 
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/8.7.1", 
+    "X-Amzn-Trace-Id": "Root=1-69c658fd-44fa5fd9354d37151da70f41"
+  }, 
+  "origin": "110.225.250.26", 
+  "url": "https://httpbin.org/get"
+}
+* Connection #0 to host httpbin.org left intact
+mindstix-dev@Mindstixs-MacBook-Pro sre-bootcamp-outputs % 
+
+Answer to (Q4) ---->
+
+Request Header --> 
+> Host: httpbin.org
+> User-Agent: curl/8.7.1
+> Accept: */*
+Response Code --> HTTP/2 200
+
+Response Header --> 
+< date: Fri, 27 Mar 2026 10:16:29 GMT
+< content-type: application/json
+< content-length: 255
+< server: gunicorn/19.9.0
+< access-control-allow-origin: *
+< access-control-allow-credentials: true
+
+Response Body -->
+{
+  "args": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Host": "httpbin.org", 
+    "User-Agent": "curl/8.7.1", 
+    "X-Amzn-Trace-Id": "Root=1-69c658fd-44fa5fd9354d37151da70f41"
+  }, 
+  "origin": "110.225.250.26", 
+  "url": "https://httpbin.org/get"
+}
