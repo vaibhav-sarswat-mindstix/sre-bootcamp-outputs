@@ -1,0 +1,50 @@
+### inside vim command
+### * * * * * echo "I am living - $(date)" >> ~/bootcamp/heartbeat.log
+
+mindstix-dev@Mindstixs-MacBook-Pro ~ % crontab -e
+crontab: installing new crontab
+mindstix-dev@Mindstixs-MacBook-Pro ~ % ls        
+Desktop			Downloads		Movies			Pictures		bootcamp		new_file.txt		shared			test
+Documents		Library			Music			Public			hello.sh		secrets.txt		sre-bootcamp-outputs	test.log
+mindstix-dev@Mindstixs-MacBook-Pro ~ % cd bootcamp 
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % ls
+README.md	heartbeat.log	scripts		week1
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % cat heartbeat.log --watch
+cat: --watch: No such file or directory
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % tail -f heartbeat.log 
+I am living - ()
+I am living - ()
+I am living - ()
+^C
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % crontab -l               
+* * * * * echo "I am living - ($date)" >> ~/bootcamp/heartbeat.log
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % crontab -e
+crontab: installing new crontab
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % echo "" > ~/bootcamp/heartbeat.log 
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % tail -f heartbeat.log             
+
+I am living - Fri Mar 27 11:16:00 IST 2026
+I am living - Fri Mar 27 11:17:00 IST 2026
+I am living - Fri Mar 27 11:18:00 IST 2026
+
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % crontab -e                        
+crontab: installing new crontab
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % crontab -l
+
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % crontab -e
+crontab: no changes made to crontab
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % ls
+README.md	heartbeat.log	scripts		week1
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % cat heartbeat.log 
+
+I am living - Fri Mar 27 11:16:00 IST 2026
+I am living - Fri Mar 27 11:17:00 IST 2026
+I am living - Fri Mar 27 11:18:00 IST 2026
+I am living - Fri Mar 27 11:19:00 IST 2026
+mindstix-dev@Mindstixs-MacBook-Pro bootcamp % tail -f heartbeat.log 
+
+I am living - Fri Mar 27 11:16:00 IST 2026
+I am living - Fri Mar 27 11:17:00 IST 2026
+I am living - Fri Mar 27 11:18:00 IST 2026
+I am living - Fri Mar 27 11:19:00 IST 2026
+^C
